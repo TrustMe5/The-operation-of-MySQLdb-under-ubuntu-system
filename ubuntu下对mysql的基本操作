@@ -1,0 +1,29 @@
+
+登陆mysql数据库可以通过如下命令：
+ 
+　　mysql -u root -p 
+
+-u 表示选择登陆的用户名， -p 表示登陆的用户密码，上面命令输入之后会提示输入密码，此时输入密码就可以登录到mysql。
+
+然后通过 show databases; 就可以查看当前的数据库。
+我们选择 mysql数据库就行下一步操作，使用use mysql 命令，显示当前数据库的表单：show tables
+
+
+创建数据库： create database dbname;
+
+删除某个已有的数据库：drop database 数据库名字;
+
+创建user表： create table user(name varchar(20),password varchar(20));
+
+插入数据：  insert into user value('Tom','123'); 
+
+查看表中的数据： select * from user;
+
+删除某个user的信息：delete from user where name='jack';
+
+修改某个人的信息： update user set password='234' where name='Allen';
+
+删除某个表格：drop table tablename;
+
+
+
