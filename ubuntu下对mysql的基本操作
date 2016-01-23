@@ -8,8 +8,12 @@ $ mysql -u root     （无密码时）
 创建一个表格: create table tablename(name varchar(20),chengji int);
 删除一个表格：drop table tablename;
 
-更改user表格中的小明的成绩：update user set chengji=12 where name='小明'
-删除user表格中名字叫小明的信息：delete from user where name='小明'
+更改user表格中的小明的成绩：update user set chengji=12 where name='小明'；
+删除user表格中名字叫小明的信息：delete from user where name='小明'；
+
+往user表内插入数据：insert into user value('Tom','87987');
+查询user表的所有数据：select * from user;
+
 mysql> show databases;  // 查看当前所有的数据库
 +--------------------+
 | Database           |
@@ -70,4 +74,31 @@ mysql> select * from user;
 | Alen   | 1111     |
 +--------+----------+
 3 rows in set (0.00 sec)
+
+修改表结构
+
+1、 ALTER TABLE tab_name ADD PRIMARY KEY (col_name)
+
+说明：更改表得的定义把某个栏位设为主键。
+
+2、ALTER TABLE tab_name DROP PRIMARY KEY (col_name)
+说明：把主键的定义删除
+
+3、 alter table tab_name add col_name varchar(20);
+//在tab_name表中增加一个名为col_name的字段且类型为varchar(20)
+
+4、alter table tab_name drop
+col_name //在tab_name中将col_name字段删除
+
+5、alter table tab_name modify col_name
+varchar(40) not null //修改字段属性，注若加上not null则要求原字段下没有数据
+SQL
+Server200下的写法是：Alter Table table_name Alter Column col_name varchar(30) not null;
+
+6、如何修改表名：alter table tab_name rename to new_tab_name
+
+7、如何修改字段名：alter table tab_name change old_col new_col varchar(40);
+//必须为当前字段指定数据类型等属性，否则不能修改
+8、create table new_tab_name like old_tab_name
+//用一个已存在的表来建新表，但不包含旧表的数据
 
