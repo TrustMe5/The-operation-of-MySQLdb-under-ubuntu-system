@@ -1,3 +1,7 @@
+终端进行mysql登录:
+$ mysql -u root -p  （有密码时）
+$ mysql -u root     （无密码时）
+
 mysql> show databases;  // 查看当前所有的数据库
 +--------------------+
 | Database           |
