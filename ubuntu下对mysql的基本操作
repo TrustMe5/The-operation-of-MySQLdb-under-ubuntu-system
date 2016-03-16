@@ -101,4 +101,4 @@ Server200下的写法是：Alter Table table_name Alter Column col_name varchar(
 //必须为当前字段指定数据类型等属性，否则不能修改
 8、create table new_tab_name like old_tab_name
 //用一个已存在的表来建新表，但不包含旧表的数据
-
+9.修改auto_increment: alter table tablename auto_increment=1;
